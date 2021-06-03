@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racunske Operacije 3</title>
+  
+</head>
+<body>
+    <script>
+            
+            // racunske operacije
+            function sabiranje(x, y) {
+                        return parseInt(x) + parseInt(y);
+                    }
+            function oduzimanje(x, y) {
+                return parseInt(x) - parseInt(y);
+            }
+            function mnozenje(x, y) {
+                return parseInt(x) * parseInt(y);
+            }
+            function deljenje(x, y) {
+                return parseInt(x) / parseInt(y);
+            }
+           
+            // provera validnosti broja
+            function proveraBroja(broj) {
+            
+            if (isNaN(broj)) {
+                return false;
+            }
+
+            else {
+                return 'Validan broj';
+            }
+        }
+        
+            // provera znaka
+            function proveraZnaka(znak) {
+                           if(znak === "+") {
+                                    var y = prompt("Unesite drugi broj")
+                                    var yType = parseInt(y)
+                                    switch(proveraBroja(yType)) {
+                                        case false : alert("Morate uneti broj")
+                                        case 'Validan broj' : alert(sabiranje(x,y))
+                                    }
+                                }
+                            else if(znak === "-") {
+                                   var y = prompt("Unesite drugi broj")
+                                   var yType = parseInt(y)
+                                    switch(proveraBroja(yType)) {
+                                        case false : alert("Morate uneti broj")
+                                        case 'Validan broj' : alert(oduzimanje(x,y))
+                                    }
+                                }
+                            else if(znak ==="*") {
+                                 var y = prompt("Unesite drugi broj")
+                                 var yType = parseInt(y)
+                                    switch(proveraBroja(yType)) {
+                                        case false : alert("Morate uneti broj")
+                                        case 'Validan broj' : alert(mnozenje(x,y))
+                                    }
+                            }
+                            else if(znak ==="/") {
+                                    var y = prompt("Unesite drugi broj")
+                                    var yType = parseInt(y)
+                                    switch(proveraBroja(yType)) {
+                                        case false : alert("Morate uneti broj")
+                                        case 'Validan broj' : alert(deljenje(x,y))
+                                    }
+                            }
+                            else {
+                                alert("Nedozvoljena racunska operacija")
+                             } 
+                    } 
+       
+        var x = prompt("Unesite prvi broj")
+        var xType = parseInt(x)
+
+
+        switch(proveraBroja(xType)) {
+        case false : alert("Morate uneti broj")
+        break
+        case 'Validan broj' : var xy = prompt("Unesite racunsku operaciju")   
+                              proveraZnaka(xy)                     
+        break
+       }    
+         
+    </script>
+</body>
+</html>
